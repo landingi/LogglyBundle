@@ -1,5 +1,5 @@
 {
-    "name": "beberlei/loggly-bundle",
+    "name": "landingi/loggly-bundle",
     "description": "Bundle for Symfony2 that extends Monolog for Loggly support",
     "license": "BSD-2-Clause",
     "type": "bundle",
