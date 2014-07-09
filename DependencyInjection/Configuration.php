@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitewashing\Bundle\LogglyBundle\DependencyInjection;
+namespace Landingi\Bundle\LogglyBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('whitewashing_loggly');
+        $rootNode = $treeBuilder->root('landingi_loggly');
 
         $rootNode->children()
                 ->scalarNode('key')->isRequired()->end()

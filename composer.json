@@ -8,7 +8,7 @@
         "symfony/monolog-bundle": "*"
     },
     "autoload": {
-        "psr-0": {"Whitewashing\\Bundle\\LogglyBundle\\": ""}
+        "psr-0": {"Landingi\\Bundle\\LogglyBundle\\": ""}
     },
-    "target-dir" : "Whitewashing/Bundle/LogglyBundle"
+    "target-dir" : "Landingi/Bundle/LogglyBundle"
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Whitewashing
+ * Landingi
  *
  * LICENSE
  *
@@ -11,9 +11,9 @@
  * to kontakt@beberlei.de so I can send you a copy immediately.
  */
 
-namespace Whitewashing\Bundle\LogglyBundle\Monolog\Handler;
+namespace Landingi\Bundle\LogglyBundle\Monolog\Handler;
 
-use Whitewashing\Bundle\LogglyBundle\WhitewashingLogglyBundle;
+use Landingi\Bundle\LogglyBundle\LandingiLogglyBundle;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Formatter\JsonFormatter;
 use Monolog\Logger;
@@ -87,7 +87,7 @@ class LogglyHandler extends AbstractProcessingHandler
 
         $request = "POST /inputs/".$this->key." HTTP/1.1\r\n";
         $request.= "Host: ".$this->host."\r\n";
-        $request.= "User-Agent: Whitewashing LogglyBundle " . WhitewashingLogglyBundle::VERSION . "\r\n";
+        $request.= "User-Agent: Landingi LogglyBundle " . WhitewashingLogglyBundle::VERSION . "\r\n";
         $request.= "Content-Type: application/json\r\n";
         $request.= "Content-Length: ".strlen($message)."\r\n";
         $request.= "Connection: Close\r\n\r\n";

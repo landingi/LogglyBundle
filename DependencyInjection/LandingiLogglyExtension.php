@@ -1,6 +1,6 @@
 <?php
 
-namespace Whitewashing\Bundle\LogglyBundle\DependencyInjection;
+namespace Landingi\Bundle\LogglyBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class WhitewashingLogglyExtension extends Extension
+class LandingiLogglyExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -28,10 +28,10 @@ class WhitewashingLogglyExtension extends Extension
         // Set the level to the correct integer value provided by Monoglog
         $config['level'] = is_int($config['level']) ? $config['level'] : constant('Monolog\Logger::'.strtoupper($config['level']));
 
-        $container->setParameter('whitewashing_loggly.loggly.key', $config['key']);
-        $container->setParameter('whitewashing_loggly.loggly.host', $config['host']);
-        $container->setParameter('whitewashing_loggly.loggly.port', $config['port']);
-        $container->setParameter('whitewashing_loggly.loggly.level', $config['level']);
-        $container->setParameter('whitewashing_loggly.loggly.bubble', $config['bubble']);
+        $container->setParameter('landingi_loggly.loggly.key', $config['key']);
+        $container->setParameter('landingi_loggly.loggly.host', $config['host']);
+        $container->setParameter('landingi_loggly.loggly.port', $config['port']);
+        $container->setParameter('landingi_loggly.loggly.level', $config['level']);
+        $container->setParameter('landingi_loggly.loggly.bubble', $config['bubble']);
     }
 }
