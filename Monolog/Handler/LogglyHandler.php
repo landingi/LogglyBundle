@@ -87,7 +87,7 @@ class LogglyHandler extends AbstractProcessingHandler
 
         $request = "POST /inputs/".$this->key." HTTP/1.1\r\n";
         $request.= "Host: ".$this->host."\r\n";
-        $request.= "User-Agent: Landingi LogglyBundle " . WhitewashingLogglyBundle::VERSION . "\r\n";
+        $request.= "User-Agent: Landingi LogglyBundle " . LandingiLogglyBundle::VERSION . "\r\n";
         $request.= "Content-Type: application/json\r\n";
         $request.= "Content-Length: ".strlen($message)."\r\n";
         $request.= "Connection: Close\r\n\r\n";
